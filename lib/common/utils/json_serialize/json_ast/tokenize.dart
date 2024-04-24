@@ -147,10 +147,8 @@ class Token {
 class ObjectNode extends Node {
   final List<PropertyNode> children;
 
-  ObjectNode(
-      [String type = 'Object', Location? loc, List<PropertyNode>? children])
-      : children = children ?? <PropertyNode>[],
-        super(type, loc);
+  ObjectNode([super.type = 'Object', super.loc, List<PropertyNode>? children])
+      : children = children ?? <PropertyNode>[];
 
   ObjectNode copyWith({
     String? type,
@@ -179,9 +177,8 @@ class ObjectNode extends Node {
 class ArrayNode extends Node {
   final List<Node> children;
 
-  ArrayNode([String type = 'Array', Location? loc, List<Node>? children])
-      : children = children ?? <Node>[],
-        super(type, loc);
+  ArrayNode([super.type = 'Array', super.loc, List<Node>? children])
+      : children = children ?? <Node>[];
 
   ArrayNode copyWith({
     String? type,
